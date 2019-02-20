@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9FFF8E3E221DF2D9004B190B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFF8E3D221DF2D9004B190B /* AppDelegate.swift */; };
+		9FFF8E40221DF2D9004B190B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFF8E3F221DF2D9004B190B /* ViewController.swift */; };
+		9FFF8E43221DF2D9004B190B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FFF8E41221DF2D9004B190B /* Main.storyboard */; };
+		9FFF8E45221DF2DA004B190B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FFF8E44221DF2DA004B190B /* Assets.xcassets */; };
+		9FFF8E48221DF2DA004B190B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FFF8E46221DF2DA004B190B /* LaunchScreen.storyboard */; };
+		9FFF8E53221DF2DA004B190B /* StashCoachTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFF8E52221DF2DA004B190B /* StashCoachTests.swift */; };
+		9FFF8E5E221DF2DA004B190B /* StashCoachUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFF8E5D221DF2DA004B190B /* StashCoachUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9FFF8E4F221DF2DA004B190B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FFF8E32221DF2D8004B190B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9FFF8E39221DF2D8004B190B;
+			remoteInfo = StashCoach;
+		};
+		9FFF8E5A221DF2DA004B190B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FFF8E32221DF2D8004B190B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9FFF8E39221DF2D8004B190B;
+			remoteInfo = StashCoach;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9FFF8E3A221DF2D9004B190B /* StashCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StashCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FFF8E3D221DF2D9004B190B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9FFF8E3F221DF2D9004B190B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9FFF8E42221DF2D9004B190B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9FFF8E44221DF2DA004B190B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9FFF8E47221DF2DA004B190B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9FFF8E49221DF2DA004B190B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FFF8E4E221DF2DA004B190B /* StashCoachTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StashCoachTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FFF8E52221DF2DA004B190B /* StashCoachTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashCoachTests.swift; sourceTree = "<group>"; };
+		9FFF8E54221DF2DA004B190B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FFF8E59221DF2DA004B190B /* StashCoachUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StashCoachUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FFF8E5D221DF2DA004B190B /* StashCoachUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashCoachUITests.swift; sourceTree = "<group>"; };
+		9FFF8E5F221DF2DA004B190B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9FFF8E37221DF2D8004B190B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FFF8E4B221DF2DA004B190B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FFF8E56221DF2DA004B190B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9FFF8E31221DF2D8004B190B = {
+			isa = PBXGroup;
+			children = (
+				9FFF8E3C221DF2D9004B190B /* StashCoach */,
+				9FFF8E51221DF2DA004B190B /* StashCoachTests */,
+				9FFF8E5C221DF2DA004B190B /* StashCoachUITests */,
+				9FFF8E3B221DF2D9004B190B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9FFF8E3B221DF2D9004B190B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9FFF8E3A221DF2D9004B190B /* StashCoach.app */,
+				9FFF8E4E221DF2DA004B190B /* StashCoachTests.xctest */,
+				9FFF8E59221DF2DA004B190B /* StashCoachUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9FFF8E3C221DF2D9004B190B /* StashCoach */ = {
+			isa = PBXGroup;
+			children = (
+				9FFF8E3D221DF2D9004B190B /* AppDelegate.swift */,
+				9FFF8E3F221DF2D9004B190B /* ViewController.swift */,
+				9FFF8E41221DF2D9004B190B /* Main.storyboard */,
+				9FFF8E44221DF2DA004B190B /* Assets.xcassets */,
+				9FFF8E46221DF2DA004B190B /* LaunchScreen.storyboard */,
+				9FFF8E49221DF2DA004B190B /* Info.plist */,
+			);
+			path = StashCoach;
+			sourceTree = "<group>";
+		};
+		9FFF8E51221DF2DA004B190B /* StashCoachTests */ = {
+			isa = PBXGroup;
+			children = (
+				9FFF8E52221DF2DA004B190B /* StashCoachTests.swift */,
+				9FFF8E54221DF2DA004B190B /* Info.plist */,
+			);
+			path = StashCoachTests;
+			sourceTree = "<group>";
+		};
+		9FFF8E5C221DF2DA004B190B /* StashCoachUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9FFF8E5D221DF2DA004B190B /* StashCoachUITests.swift */,
+				9FFF8E5F221DF2DA004B190B /* Info.plist */,
+			);
+			path = StashCoachUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9FFF8E39221DF2D8004B190B /* StashCoach */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FFF8E62221DF2DA004B190B /* Build configuration list for PBXNativeTarget "StashCoach" */;
+			buildPhases = (
+				9FFF8E36221DF2D8004B190B /* Sources */,
+				9FFF8E37221DF2D8004B190B /* Frameworks */,
+				9FFF8E38221DF2D8004B190B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StashCoach;
+			productName = StashCoach;
+			productReference = 9FFF8E3A221DF2D9004B190B /* StashCoach.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9FFF8E4D221DF2DA004B190B /* StashCoachTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FFF8E65221DF2DA004B190B /* Build configuration list for PBXNativeTarget "StashCoachTests" */;
+			buildPhases = (
+				9FFF8E4A221DF2DA004B190B /* Sources */,
+				9FFF8E4B221DF2DA004B190B /* Frameworks */,
+				9FFF8E4C221DF2DA004B190B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9FFF8E50221DF2DA004B190B /* PBXTargetDependency */,
+			);
+			name = StashCoachTests;
+			productName = StashCoachTests;
+			productReference = 9FFF8E4E221DF2DA004B190B /* StashCoachTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9FFF8E58221DF2DA004B190B /* StashCoachUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FFF8E68221DF2DA004B190B /* Build configuration list for PBXNativeTarget "StashCoachUITests" */;
+			buildPhases = (
+				9FFF8E55221DF2DA004B190B /* Sources */,
+				9FFF8E56221DF2DA004B190B /* Frameworks */,
+				9FFF8E57221DF2DA004B190B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9FFF8E5B221DF2DA004B190B /* PBXTargetDependency */,
+			);
+			name = StashCoachUITests;
+			productName = StashCoachUITests;
+			productReference = 9FFF8E59221DF2DA004B190B /* StashCoachUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9FFF8E32221DF2D8004B190B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = abhinay;
+				TargetAttributes = {
+					9FFF8E39221DF2D8004B190B = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					9FFF8E4D221DF2DA004B190B = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 9FFF8E39221DF2D8004B190B;
+					};
+					9FFF8E58221DF2DA004B190B = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 9FFF8E39221DF2D8004B190B;
+					};
+				};
+			};
+			buildConfigurationList = 9FFF8E35221DF2D8004B190B /* Build configuration list for PBXProject "StashCoach" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9FFF8E31221DF2D8004B190B;
+			productRefGroup = 9FFF8E3B221DF2D9004B190B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9FFF8E39221DF2D8004B190B /* StashCoach */,
+				9FFF8E4D221DF2DA004B190B /* StashCoachTests */,
+				9FFF8E58221DF2DA004B190B /* StashCoachUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9FFF8E38221DF2D8004B190B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FFF8E48221DF2DA004B190B /* LaunchScreen.storyboard in Resources */,
+				9FFF8E45221DF2DA004B190B /* Assets.xcassets in Resources */,
+				9FFF8E43221DF2D9004B190B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FFF8E4C221DF2DA004B190B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FFF8E57221DF2DA004B190B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9FFF8E36221DF2D8004B190B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FFF8E40221DF2D9004B190B /* ViewController.swift in Sources */,
+				9FFF8E3E221DF2D9004B190B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FFF8E4A221DF2DA004B190B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FFF8E53221DF2DA004B190B /* StashCoachTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FFF8E55221DF2DA004B190B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FFF8E5E221DF2DA004B190B /* StashCoachUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9FFF8E50221DF2DA004B190B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9FFF8E39221DF2D8004B190B /* StashCoach */;
+			targetProxy = 9FFF8E4F221DF2DA004B190B /* PBXContainerItemProxy */;
+		};
+		9FFF8E5B221DF2DA004B190B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9FFF8E39221DF2D8004B190B /* StashCoach */;
+			targetProxy = 9FFF8E5A221DF2DA004B190B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9FFF8E41221DF2D9004B190B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FFF8E42221DF2D9004B190B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9FFF8E46221DF2DA004B190B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FFF8E47221DF2DA004B190B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9FFF8E60221DF2DA004B190B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9FFF8E61221DF2DA004B190B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9FFF8E63221DF2DA004B190B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 34H4VK3UZ5;
+				INFOPLIST_FILE = StashCoach/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.abhinay.StashCoach;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9FFF8E64221DF2DA004B190B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 34H4VK3UZ5;
+				INFOPLIST_FILE = StashCoach/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.abhinay.StashCoach;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9FFF8E66221DF2DA004B190B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 34H4VK3UZ5;
+				INFOPLIST_FILE = StashCoachTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.abhinay.StashCoachTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StashCoach.app/StashCoach";
+			};
+			name = Debug;
+		};
+		9FFF8E67221DF2DA004B190B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 34H4VK3UZ5;
+				INFOPLIST_FILE = StashCoachTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.abhinay.StashCoachTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StashCoach.app/StashCoach";
+			};
+			name = Release;
+		};
+		9FFF8E69221DF2DA004B190B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 34H4VK3UZ5;
+				INFOPLIST_FILE = StashCoachUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.abhinay.StashCoachUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StashCoach;
+			};
+			name = Debug;
+		};
+		9FFF8E6A221DF2DA004B190B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 34H4VK3UZ5;
+				INFOPLIST_FILE = StashCoachUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.abhinay.StashCoachUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StashCoach;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9FFF8E35221DF2D8004B190B /* Build configuration list for PBXProject "StashCoach" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FFF8E60221DF2DA004B190B /* Debug */,
+				9FFF8E61221DF2DA004B190B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FFF8E62221DF2DA004B190B /* Build configuration list for PBXNativeTarget "StashCoach" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FFF8E63221DF2DA004B190B /* Debug */,
+				9FFF8E64221DF2DA004B190B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FFF8E65221DF2DA004B190B /* Build configuration list for PBXNativeTarget "StashCoachTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FFF8E66221DF2DA004B190B /* Debug */,
+				9FFF8E67221DF2DA004B190B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FFF8E68221DF2DA004B190B /* Build configuration list for PBXNativeTarget "StashCoachUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FFF8E69221DF2DA004B190B /* Debug */,
+				9FFF8E6A221DF2DA004B190B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9FFF8E32221DF2D8004B190B /* Project object */;
+}
