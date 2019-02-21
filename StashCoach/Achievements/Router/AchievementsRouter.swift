@@ -14,7 +14,7 @@ final class AchievementsRouter: AchievementsRouterProtocol {
     }
 }
 
-final class AchievementsAssembler {
+fileprivate final class AchievementsAssembler {
     static func assembleModule() -> AchievementsViewControllerProtocol {
         let view: AchievementsViewControllerProtocol = AchievementsViewController()
         var presenter: AchievementsPresenterProtocol = AchievementsPresenter()

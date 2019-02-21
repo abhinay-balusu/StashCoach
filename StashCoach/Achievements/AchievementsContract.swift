@@ -26,6 +26,9 @@ protocol AchievementsPresenterProtocol {
 }
 
 protocol AchievementsInteractorProtocol {
+    /// Data Retrieval
+    ///
+    /// - Parameter completion: returns optional 'CoachModelProtocol' & optional 'Error'
     func fetchCoachData(completion: @escaping (_ coach: CoachModelProtocol?, _ error: Error?) -> Void)
 }
 

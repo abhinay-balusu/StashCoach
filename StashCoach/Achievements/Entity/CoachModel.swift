@@ -44,15 +44,12 @@ struct Overview: OverviewModelProtocol {
 }
 
 protocol CoachModelProtocol: Decodable {
-//    associatedtype A = AchievementModelProtocol
-//    associatedtype O = OverviewModelProtocol
     var success: Bool { get }
     var status: Int { get }
     var overview: Overview { get }
     var achievements: [Achievement] { get }
 }
 
-//struct Coach<A: AchievementModelProtocol, O: OverviewModelProtocol>: CoachModelProtocol
 struct Coach: CoachModelProtocol {
     let success: Bool
     let status: Int

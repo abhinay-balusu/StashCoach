@@ -9,7 +9,7 @@
 import Foundation
 
 final class AchievementsPresenter: AchievementsPresenterProtocol {
-    var view: AchievementsViewControllerProtocol?
+    weak var view: AchievementsViewControllerProtocol?
     var interactor: AchievementsInteractorProtocol?
     var router: AchievementsRouterProtocol?
     var coach: CoachModelProtocol?
