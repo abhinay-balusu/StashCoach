@@ -9,26 +9,144 @@
 import XCTest
 @testable import StashCoach
 
-class StashCoachTests: XCTestCase {
+final class AchievementsInteractorMock: AchievementsInteractorProtocol {
+    var fetchCoachDataCalled: Bool = false
+    func fetchCoachData(completion: @escaping (CoachModelProtocol?, Error?) -> Void) {
+        fetchCoachDataCalled = true
+    }
+}
+
+class AchievementsPresenterTests: XCTestCase {
+
+    var presenter: AchievementsPresenterProtocol! = nil
+    var interactor: AchievementsInteractorMock! = nil
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        presenter = AchievementsPresenter()
+        interactor = AchievementsInteractorMock()
+
+        presenter.interactor = interactor
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        presenter = nil
+        interactor = nil
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testInitialization() {
+        XCTAssertNotNil(presenter)
+        XCTAssertNotNil(presenter.interactor)
+        XCTAssertNotNil(interactor)
+        XCTAssertNil(presenter.coach)
     }
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testRequestData() {
+        presenter.requestCoachData()
+        XCTAssert(interactor.fetchCoachDataCalled)
+    }
+
+    func testDataSource() {
+        presenter = AchievementsPresenter(coach: Coach(success: true, status: 200, overview: Overview(title: "Smart Investing"), achievements: [Achievement(id: 1, level: "1", progress: 10, total: 50, backgroundImageUrl: "url", accessible: true)]))
+        XCTAssertNotNil(presenter.coach)
+        XCTAssert(presenter.numberOfRows() == 1)
+    }
+}
+
+class AcievementsInteractorTests: XCTestCase {
+
+    var interactor: AchievementsInteractorProtocol! = nil
+
+    override func setUp() {
+        interactor = AchievementsInteractor()
+    }
+
+    override func tearDown() {
+        interactor = nil
+    }
+
+    func testInitialization() {
+        XCTAssertNotNil(interactor)
+    }
+
+    func testFetchData() {
+        var coach: CoachModelProtocol?
+        let expectation = self.expectation(description: "Data Retrieval")
+        interactor.fetchCoachData { (coachObject, error) in
+            coach = coachObject
+            expectation.fulfill()
         }
+        waitForExpectations(timeout: 2, handler: nil)
+        XCTAssertNotNil(coach)
+        XCTAssert(coach?.achievements.count == 3)
+    }
+}
+
+class AchievementsRouterTests: XCTestCase {
+    func testRouterModule() {
+        XCTAssertNotNil(AchievementsRouter.achievementsModule())
+        let vc = AchievementsAssembler.assembleModule()
+        XCTAssert(vc is AchievementsViewController)
+        XCTAssertNotNil(vc.presenter)
+        XCTAssertNotNil(vc.presenter?.interactor)
+        XCTAssertNotNil(vc.presenter?.router)
+        XCTAssertNil(vc.presenter?.coach)
+    }
+}
+
+final class AchievementsPresenterMock: AchievementsPresenterProtocol {
+    var view: AchievementsViewControllerProtocol?
+    var interactor: AchievementsInteractorProtocol?
+    var router: AchievementsRouterProtocol?
+    var coach: CoachModelProtocol?
+
+    init() {
+        coach = Coach(success: true, status: 200, overview: Overview(title: "Smart Investing"), achievements: [Achievement(id: 1, level: "1", progress: 10, total: 50, backgroundImageUrl: "url", accessible: true)])
     }
 
+    var requestCoachDataCalled: Bool = false
+    func requestCoachData() {
+        requestCoachDataCalled = true
+    }
+
+    func numberOfRows() -> Int? {
+        return coach?.achievements.count
+    }
+}
+
+class AchievementsViewControllerTests: XCTestCase {
+    var view: AchievementsViewController! = nil
+    var presenter: AchievementsPresenterMock! = nil
+
+    override func setUp() {
+        view = AchievementsViewController()
+        presenter = AchievementsPresenterMock()
+
+        view.presenter = presenter
+        view.viewDidLoad()
+    }
+
+    override func tearDown() {
+        view = nil
+        presenter = nil
+    }
+
+    func testInitialization() {
+        XCTAssertNotNil(view)
+        XCTAssertNotNil(view.presenter)
+        XCTAssert(presenter.requestCoachDataCalled)
+    }
+
+    func testCollectionView() {
+        XCTAssert(view.conforms(to: UICollectionViewDataSource.self))
+        XCTAssert(view.conforms(to: UICollectionViewDelegateFlowLayout.self))
+        let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
+        collectionView.dataSource = view.self
+        XCTAssert(view.collectionView(collectionView, numberOfItemsInSection: 0) == 1)
+    }
+
+    func testScreenTitle() {
+        view.updateTitle(withText: "Stash")
+        XCTAssertNotNil(view.title)
+        XCTAssert(view.title == "Stash")
+    }
 }

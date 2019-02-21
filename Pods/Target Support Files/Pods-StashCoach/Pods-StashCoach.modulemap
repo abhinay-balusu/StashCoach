@@ -1,0 +1,6 @@
+module Pods_StashCoach {
+  umbrella header "Pods-StashCoach-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+module Pods_StashCoachTests {
+  umbrella header "Pods-StashCoachTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

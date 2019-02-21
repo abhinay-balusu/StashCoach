@@ -7,13 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71445C868EBED26D91DEAD65 /* libPods-StashCoachTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A27F2984769E4817E613BB73 /* libPods-StashCoachTests.a */; };
+		82FC7C1E724F007E8CE63361 /* libPods-StashCoach.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 430BC2BEB9C85355B2C176B8 /* libPods-StashCoach.a */; };
+		94F05501713FCF2EEFEDC84B /* libPods-StashCoachUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD676E53689AFB51C88E9CD3 /* libPods-StashCoachUITests.a */; };
 		9FFF8E3E221DF2D9004B190B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFF8E3D221DF2D9004B190B /* AppDelegate.swift */; };
-		9FFF8E40221DF2D9004B190B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFF8E3F221DF2D9004B190B /* ViewController.swift */; };
-		9FFF8E43221DF2D9004B190B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FFF8E41221DF2D9004B190B /* Main.storyboard */; };
 		9FFF8E45221DF2DA004B190B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FFF8E44221DF2DA004B190B /* Assets.xcassets */; };
 		9FFF8E48221DF2DA004B190B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FFF8E46221DF2DA004B190B /* LaunchScreen.storyboard */; };
 		9FFF8E53221DF2DA004B190B /* StashCoachTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFF8E52221DF2DA004B190B /* StashCoachTests.swift */; };
 		9FFF8E5E221DF2DA004B190B /* StashCoachUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFF8E5D221DF2DA004B190B /* StashCoachUITests.swift */; };
+		9FFF8E6E221DF370004B190B /* achievements.json in Resources */ = {isa = PBXBuildFile; fileRef = 9FFF8E6D221DF370004B190B /* achievements.json */; };
+		9FFF8E75221DF3F8004B190B /* AchievementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFF8E74221DF3F8004B190B /* AchievementsViewController.swift */; };
+		9FFF8E77221DF412004B190B /* AchievementsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFF8E76221DF412004B190B /* AchievementsInteractor.swift */; };
+		9FFF8E79221DF426004B190B /* AchievementsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFF8E78221DF426004B190B /* AchievementsPresenter.swift */; };
+		9FFF8E7B221DF448004B190B /* CoachModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFF8E7A221DF448004B190B /* CoachModel.swift */; };
+		9FFF8E7D221DF456004B190B /* AchievementsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFF8E7C221DF456004B190B /* AchievementsRouter.swift */; };
+		9FFF8E80221E051B004B190B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FFF8E7F221E051B004B190B /* Default-568h@2x.png */; };
+		9FFF8E83221E066D004B190B /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFF8E82221E066D004B190B /* Util.swift */; };
+		9FFF8E85221E0A31004B190B /* AchievementsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFF8E84221E0A31004B190B /* AchievementsContract.swift */; };
+		9FFF8E89221E0CB6004B190B /* AchievementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFF8E87221E0CB6004B190B /* AchievementCollectionViewCell.swift */; };
+		9FFF8E8A221E0CB6004B190B /* AchievementCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FFF8E88221E0CB6004B190B /* AchievementCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +46,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1384E4BB8CA7BCA7F6B24BC3 /* Pods-StashCoach.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StashCoach.release.xcconfig"; path = "Target Support Files/Pods-StashCoach/Pods-StashCoach.release.xcconfig"; sourceTree = "<group>"; };
+		430BC2BEB9C85355B2C176B8 /* libPods-StashCoach.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StashCoach.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FB7E5962373E0961E9EEFE9 /* Pods-StashCoach.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StashCoach.debug.xcconfig"; path = "Target Support Files/Pods-StashCoach/Pods-StashCoach.debug.xcconfig"; sourceTree = "<group>"; };
+		53C745D6444536E2783ED144 /* Pods-StashCoachUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StashCoachUITests.release.xcconfig"; path = "Target Support Files/Pods-StashCoachUITests/Pods-StashCoachUITests.release.xcconfig"; sourceTree = "<group>"; };
+		565C5EEBAFFD915311C3AA56 /* Pods-StashCoachTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StashCoachTests.debug.xcconfig"; path = "Target Support Files/Pods-StashCoachTests/Pods-StashCoachTests.debug.xcconfig"; sourceTree = "<group>"; };
+		75BE340B6B85CD2B88FE9A7D /* Pods-StashCoachTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StashCoachTests.release.xcconfig"; path = "Target Support Files/Pods-StashCoachTests/Pods-StashCoachTests.release.xcconfig"; sourceTree = "<group>"; };
+		90BD8E3E70F6FA3278BE3BC7 /* Pods-StashCoachUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StashCoachUITests.debug.xcconfig"; path = "Target Support Files/Pods-StashCoachUITests/Pods-StashCoachUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9FFF8E3A221DF2D9004B190B /* StashCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StashCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FFF8E3D221DF2D9004B190B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9FFF8E3F221DF2D9004B190B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9FFF8E42221DF2D9004B190B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9FFF8E44221DF2DA004B190B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FFF8E47221DF2DA004B190B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FFF8E49221DF2DA004B190B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +64,19 @@
 		9FFF8E59221DF2DA004B190B /* StashCoachUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StashCoachUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FFF8E5D221DF2DA004B190B /* StashCoachUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashCoachUITests.swift; sourceTree = "<group>"; };
 		9FFF8E5F221DF2DA004B190B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FFF8E6D221DF370004B190B /* achievements.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = achievements.json; sourceTree = "<group>"; };
+		9FFF8E74221DF3F8004B190B /* AchievementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewController.swift; sourceTree = "<group>"; };
+		9FFF8E76221DF412004B190B /* AchievementsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsInteractor.swift; sourceTree = "<group>"; };
+		9FFF8E78221DF426004B190B /* AchievementsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsPresenter.swift; sourceTree = "<group>"; };
+		9FFF8E7A221DF448004B190B /* CoachModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachModel.swift; sourceTree = "<group>"; };
+		9FFF8E7C221DF456004B190B /* AchievementsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsRouter.swift; sourceTree = "<group>"; };
+		9FFF8E7F221E051B004B190B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9FFF8E82221E066D004B190B /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		9FFF8E84221E0A31004B190B /* AchievementsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsContract.swift; sourceTree = "<group>"; };
+		9FFF8E87221E0CB6004B190B /* AchievementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCollectionViewCell.swift; sourceTree = "<group>"; };
+		9FFF8E88221E0CB6004B190B /* AchievementCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AchievementCollectionViewCell.xib; sourceTree = "<group>"; };
+		A27F2984769E4817E613BB73 /* libPods-StashCoachTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StashCoachTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD676E53689AFB51C88E9CD3 /* libPods-StashCoachUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StashCoachUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82FC7C1E724F007E8CE63361 /* libPods-StashCoach.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71445C868EBED26D91DEAD65 /* libPods-StashCoachTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,19 +100,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94F05501713FCF2EEFEDC84B /* libPods-StashCoachUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4743A84B27E34C1E4ACD3164 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4FB7E5962373E0961E9EEFE9 /* Pods-StashCoach.debug.xcconfig */,
+				1384E4BB8CA7BCA7F6B24BC3 /* Pods-StashCoach.release.xcconfig */,
+				565C5EEBAFFD915311C3AA56 /* Pods-StashCoachTests.debug.xcconfig */,
+				75BE340B6B85CD2B88FE9A7D /* Pods-StashCoachTests.release.xcconfig */,
+				90BD8E3E70F6FA3278BE3BC7 /* Pods-StashCoachUITests.debug.xcconfig */,
+				53C745D6444536E2783ED144 /* Pods-StashCoachUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		84837B2A3B70C0AA7118995E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				430BC2BEB9C85355B2C176B8 /* libPods-StashCoach.a */,
+				A27F2984769E4817E613BB73 /* libPods-StashCoachTests.a */,
+				BD676E53689AFB51C88E9CD3 /* libPods-StashCoachUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9FFF8E31221DF2D8004B190B = {
 			isa = PBXGroup;
 			children = (
+				9FFF8E3D221DF2D9004B190B /* AppDelegate.swift */,
 				9FFF8E3C221DF2D9004B190B /* StashCoach */,
+				9FFF8E6B221DF325004B190B /* App_Resources */,
 				9FFF8E51221DF2DA004B190B /* StashCoachTests */,
 				9FFF8E5C221DF2DA004B190B /* StashCoachUITests */,
 				9FFF8E3B221DF2D9004B190B /* Products */,
+				4743A84B27E34C1E4ACD3164 /* Pods */,
+				84837B2A3B70C0AA7118995E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +157,7 @@
 		9FFF8E3C221DF2D9004B190B /* StashCoach */ = {
 			isa = PBXGroup;
 			children = (
-				9FFF8E3D221DF2D9004B190B /* AppDelegate.swift */,
-				9FFF8E3F221DF2D9004B190B /* ViewController.swift */,
-				9FFF8E41221DF2D9004B190B /* Main.storyboard */,
-				9FFF8E44221DF2DA004B190B /* Assets.xcassets */,
-				9FFF8E46221DF2DA004B190B /* LaunchScreen.storyboard */,
-				9FFF8E49221DF2DA004B190B /* Info.plist */,
+				9FFF8E86221E0AC5004B190B /* Achievements */,
 			);
 			path = StashCoach;
 			sourceTree = "<group>";
@@ -125,6 +180,90 @@
 			path = StashCoachUITests;
 			sourceTree = "<group>";
 		};
+		9FFF8E6B221DF325004B190B /* App_Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9FFF8E49221DF2DA004B190B /* Info.plist */,
+				9FFF8E7F221E051B004B190B /* Default-568h@2x.png */,
+				9FFF8E46221DF2DA004B190B /* LaunchScreen.storyboard */,
+				9FFF8E44221DF2DA004B190B /* Assets.xcassets */,
+			);
+			path = App_Resources;
+			sourceTree = "<group>";
+		};
+		9FFF8E6C221DF34F004B190B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9FFF8E6D221DF370004B190B /* achievements.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		9FFF8E6F221DF37C004B190B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				9FFF8E7A221DF448004B190B /* CoachModel.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		9FFF8E70221DF385004B190B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9FFF8E74221DF3F8004B190B /* AchievementsViewController.swift */,
+				9FFF8E87221E0CB6004B190B /* AchievementCollectionViewCell.swift */,
+				9FFF8E88221E0CB6004B190B /* AchievementCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9FFF8E71221DF38B004B190B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9FFF8E78221DF426004B190B /* AchievementsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9FFF8E72221DF395004B190B /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				9FFF8E76221DF412004B190B /* AchievementsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		9FFF8E73221DF39C004B190B /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9FFF8E7C221DF456004B190B /* AchievementsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		9FFF8E81221E0650004B190B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9FFF8E82221E066D004B190B /* Util.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		9FFF8E86221E0AC5004B190B /* Achievements */ = {
+			isa = PBXGroup;
+			children = (
+				9FFF8E84221E0A31004B190B /* AchievementsContract.swift */,
+				9FFF8E70221DF385004B190B /* View */,
+				9FFF8E72221DF395004B190B /* Interactor */,
+				9FFF8E71221DF38B004B190B /* Presenter */,
+				9FFF8E6F221DF37C004B190B /* Entity */,
+				9FFF8E73221DF39C004B190B /* Router */,
+				9FFF8E6C221DF34F004B190B /* Data */,
+				9FFF8E81221E0650004B190B /* Utilities */,
+			);
+			path = Achievements;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +271,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9FFF8E62221DF2DA004B190B /* Build configuration list for PBXNativeTarget "StashCoach" */;
 			buildPhases = (
+				1A9E89BB627D230BC11FC054 /* [CP] Check Pods Manifest.lock */,
 				9FFF8E36221DF2D8004B190B /* Sources */,
 				9FFF8E37221DF2D8004B190B /* Frameworks */,
 				9FFF8E38221DF2D8004B190B /* Resources */,
+				9FFF8E8B221E74D7004B190B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -149,9 +290,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9FFF8E65221DF2DA004B190B /* Build configuration list for PBXNativeTarget "StashCoachTests" */;
 			buildPhases = (
+				615E3AB30C527016D2C459C9 /* [CP] Check Pods Manifest.lock */,
 				9FFF8E4A221DF2DA004B190B /* Sources */,
 				9FFF8E4B221DF2DA004B190B /* Frameworks */,
 				9FFF8E4C221DF2DA004B190B /* Resources */,
+				9FFF8E8C221E74E4004B190B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -167,6 +310,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9FFF8E68221DF2DA004B190B /* Build configuration list for PBXNativeTarget "StashCoachUITests" */;
 			buildPhases = (
+				5BEB82B3DEFEE0D0ED00B292 /* [CP] Check Pods Manifest.lock */,
 				9FFF8E55221DF2DA004B190B /* Sources */,
 				9FFF8E56221DF2DA004B190B /* Frameworks */,
 				9FFF8E57221DF2DA004B190B /* Resources */,
@@ -229,9 +373,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FFF8E6E221DF370004B190B /* achievements.json in Resources */,
+				9FFF8E80221E051B004B190B /* Default-568h@2x.png in Resources */,
+				9FFF8E8A221E0CB6004B190B /* AchievementCollectionViewCell.xib in Resources */,
 				9FFF8E48221DF2DA004B190B /* LaunchScreen.storyboard in Resources */,
 				9FFF8E45221DF2DA004B190B /* Assets.xcassets in Resources */,
-				9FFF8E43221DF2D9004B190B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,12 +397,122 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1A9E89BB627D230BC11FC054 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StashCoach-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5BEB82B3DEFEE0D0ED00B292 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StashCoachUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		615E3AB30C527016D2C459C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StashCoachTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FFF8E8B221E74D7004B190B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		9FFF8E8C221E74E4004B190B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9FFF8E36221DF2D8004B190B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FFF8E40221DF2D9004B190B /* ViewController.swift in Sources */,
+				9FFF8E7D221DF456004B190B /* AchievementsRouter.swift in Sources */,
+				9FFF8E7B221DF448004B190B /* CoachModel.swift in Sources */,
+				9FFF8E85221E0A31004B190B /* AchievementsContract.swift in Sources */,
+				9FFF8E77221DF412004B190B /* AchievementsInteractor.swift in Sources */,
+				9FFF8E75221DF3F8004B190B /* AchievementsViewController.swift in Sources */,
+				9FFF8E83221E066D004B190B /* Util.swift in Sources */,
+				9FFF8E79221DF426004B190B /* AchievementsPresenter.swift in Sources */,
+				9FFF8E89221E0CB6004B190B /* AchievementCollectionViewCell.swift in Sources */,
 				9FFF8E3E221DF2D9004B190B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,14 +549,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9FFF8E41221DF2D9004B190B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9FFF8E42221DF2D9004B190B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9FFF8E46221DF2DA004B190B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -430,11 +678,12 @@
 		};
 		9FFF8E63221DF2DA004B190B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FB7E5962373E0961E9EEFE9 /* Pods-StashCoach.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 34H4VK3UZ5;
-				INFOPLIST_FILE = StashCoach/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/App_Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -448,11 +697,12 @@
 		};
 		9FFF8E64221DF2DA004B190B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1384E4BB8CA7BCA7F6B24BC3 /* Pods-StashCoach.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 34H4VK3UZ5;
-				INFOPLIST_FILE = StashCoach/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/App_Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,8 +716,8 @@
 		};
 		9FFF8E66221DF2DA004B190B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 565C5EEBAFFD915311C3AA56 /* Pods-StashCoachTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 34H4VK3UZ5;
@@ -487,8 +737,8 @@
 		};
 		9FFF8E67221DF2DA004B190B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75BE340B6B85CD2B88FE9A7D /* Pods-StashCoachTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 34H4VK3UZ5;
@@ -508,6 +758,7 @@
 		};
 		9FFF8E69221DF2DA004B190B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90BD8E3E70F6FA3278BE3BC7 /* Pods-StashCoachUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +779,7 @@
 		};
 		9FFF8E6A221DF2DA004B190B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53C745D6444536E2783ED144 /* Pods-StashCoachUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

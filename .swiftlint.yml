@@ -1,0 +1,31 @@
+included: # paths to include during linting. `--path` is ignored if present.
+    - StashCoach
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+    - Pods
+disabled_rules: # rule identifiers to exclude from running
+  - nesting
+  - function_parameter_count
+  - identifier_name
+opt_in_rules: # some rules are only opt-in
+  - control_statement
+  - empty_count
+  - colon
+  - comma
+  - trailing_whitespace
+  - trailing_newline
+  - vertical_whitespace
+  - force_cast
+  - force_unwrapping
+  - force_try
+line_length:
+  warning: 400
+  ignores_function_declarations: true
+  ignores_comments: true
+  ignores_interpolated_strings: true
+  ignores_urls: true
+# or they can set both explicitly
+file_length:
+  warning: 500
+  error: 800
+
+reporter: "xcode"
