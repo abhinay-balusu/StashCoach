@@ -49,6 +49,7 @@ class AchievementsPresenterTests: XCTestCase {
         presenter = AchievementsPresenter(coach: Coach(success: true, status: 200, overview: Overview(title: "Smart Investing"), achievements: [Achievement(id: 1, level: "1", progress: 10, total: 50, backgroundImageUrl: "url", accessible: true)]))
         XCTAssertNotNil(presenter.coach)
         XCTAssert(presenter.numberOfRows() == 1)
+        XCTAssertNotNil(presenter.achievementViewModel(forRow: 0))
     }
 }
 
@@ -72,6 +73,8 @@ class AcievementsInteractorTests: XCTestCase {
         var coach: CoachModelProtocol?
         let expectation = self.expectation(description: "Data Retrieval")
         interactor.fetchCoachData { (coachObject, error) in
+            XCTAssertNil(error)
+            XCTAssertNotNil(coachObject)
             coach = coachObject
             expectation.fulfill()
         }
@@ -84,8 +87,7 @@ class AcievementsInteractorTests: XCTestCase {
 class AchievementsRouterTests: XCTestCase {
     func testRouterModule() {
         XCTAssertNotNil(AchievementsRouter.achievementsModule())
-        let vc = AchievementsAssembler.assembleModule()
-        XCTAssert(vc is AchievementsViewController)
+        let vc = AchievementsRouter.achievementsModule()
         XCTAssertNotNil(vc.presenter)
         XCTAssertNotNil(vc.presenter?.interactor)
         XCTAssertNotNil(vc.presenter?.router)
@@ -110,6 +112,10 @@ final class AchievementsPresenterMock: AchievementsPresenterProtocol {
 
     func numberOfRows() -> Int? {
         return coach?.achievements.count
+    }
+
+    func achievementViewModel(forRow row: Int) -> AchievementViewModelProtocol? {
+        return AchievementViewModel(achievement: Achievement(id: 1, level: "1", progress: 10, total: 50, backgroundImageUrl: "url", accessible: true))
     }
 }
 
@@ -148,5 +154,16 @@ class AchievementsViewControllerTests: XCTestCase {
         view.updateTitle(withText: "Stash")
         XCTAssertNotNil(view.title)
         XCTAssert(view.title == "Stash")
+    }
+
+    func testAchievementsViewModel() {
+        let achievementViewModel = presenter.achievementViewModel(forRow: 0)
+        XCTAssertNotNil(achievementViewModel)
+        XCTAssert(achievementViewModel?.achievementLevel() == "1")
+        XCTAssert(achievementViewModel?.achievementProgress() == 0.2)
+        XCTAssert(achievementViewModel?.achievementAccessibility() == true)
+        XCTAssert(achievementViewModel?.achievementProgressValue() == "10pts")
+        XCTAssert(achievementViewModel?.achievementTotalprogress() == "50pts")
+        XCTAssertNotNil(achievementViewModel?.achievementBgImageURL())
     }
 }

@@ -25,6 +25,15 @@ final class AchievementCollectionViewCell: UICollectionViewCell {
         bgImageView.layer.cornerRadius = 12
         bgImageView.clipsToBounds = true
     }
+
+    func configure(withViewModel viewModel: AchievementViewModelProtocol) {
+        levelValuelabel.text = viewModel.achievementLevel()
+        progressBar.setProgress(viewModel.achievementProgress(), animated: false)
+        progressvalueLabel.text = viewModel.achievementProgressValue()
+        totalProgressIndicatorLabel.text = viewModel.achievementTotalprogress()
+        bgImageView.kf.setImage(with: viewModel.achievementBgImageURL())
+        contentView.alpha = viewModel.achievementAccessibility() ? 1 : 0.5
+    }
 }
 
 final class StashProgressView: UIProgressView {

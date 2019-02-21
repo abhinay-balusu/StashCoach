@@ -23,6 +23,7 @@ protocol AchievementsPresenterProtocol {
 
     func requestCoachData()
     func numberOfRows() -> Int?
+    func achievementViewModel(forRow row: Int) -> AchievementViewModelProtocol?
 }
 
 protocol AchievementsInteractorProtocol {
@@ -34,4 +35,15 @@ protocol AchievementsInteractorProtocol {
 
 protocol AchievementsRouterProtocol {
     static func achievementsModule() -> AchievementsViewController
+}
+
+protocol AchievementViewModelProtocol {
+    var achievement: AchievementModelProtocol { get }
+
+    func achievementLevel() -> String
+    func achievementProgress() -> Float
+    func achievementProgressValue() -> String
+    func achievementTotalprogress() -> String
+    func achievementBgImageURL() -> URL?
+    func achievementAccessibility() -> Bool
 }

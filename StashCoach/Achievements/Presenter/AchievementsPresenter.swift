@@ -33,4 +33,40 @@ final class AchievementsPresenter: AchievementsPresenterProtocol {
     func numberOfRows() -> Int? {
         return coach?.achievements.count
     }
+
+    func achievementViewModel(forRow row: Int) -> AchievementViewModelProtocol? {
+        guard let achievement = coach?.achievements[safe: row] else { return nil }
+        return AchievementViewModel(achievement: achievement)
+    }
+}
+
+struct AchievementViewModel: AchievementViewModelProtocol {
+
+    static let ptsSuffix: String = "pts"
+
+    internal let achievement: AchievementModelProtocol
+
+    func achievementLevel() -> String {
+        return achievement.level
+    }
+
+    func achievementProgress() -> Float {
+        return Float(achievement.progress)/Float(achievement.total)
+    }
+
+    func achievementProgressValue() -> String {
+        return achievement.progress.description + AchievementViewModel.ptsSuffix
+    }
+
+    func achievementTotalprogress() -> String {
+        return achievement.total.description + AchievementViewModel.ptsSuffix
+    }
+
+    func achievementBgImageURL() -> URL? {
+        return URL(string: achievement.backgroundImageUrl)
+    }
+
+    func achievementAccessibility() -> Bool {
+        return achievement.accessible
+    }
 }

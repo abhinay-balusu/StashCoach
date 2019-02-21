@@ -13,6 +13,11 @@ import Kingfisher
 final class AchievementsViewController: UIViewController, AchievementsViewControllerProtocol {
     var presenter: AchievementsPresenterProtocol?
 
+    private struct Constants {
+        static let achievementCellIndentifier: String = "AchievementCollectionViewCell"
+        static let collectionViewItemHeight: CGFloat = 192
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -45,7 +50,7 @@ final class AchievementsViewController: UIViewController, AchievementsViewContro
 
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.register(UINib.init(nibName: "AchievementCollectionViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: "AchievementCollectionViewCell")
+        collectionView.register(UINib.init(nibName: Constants.achievementCellIndentifier, bundle: Bundle.main), forCellWithReuseIdentifier: Constants.achievementCellIndentifier)
         collectionView.showsVerticalScrollIndicator = false
         collectionView.backgroundColor = UIColor.white
 
@@ -88,26 +93,17 @@ extension AchievementsViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AchievementCollectionViewCell", for: indexPath) as? AchievementCollectionViewCell,
-            let achievement = presenter?.coach?.achievements[indexPath.row]
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.achievementCellIndentifier, for: indexPath) as? AchievementCollectionViewCell,
+            let achievementViewModel = presenter?.achievementViewModel(forRow: indexPath.row)
         else { return AchievementCollectionViewCell() }
-        configure(cell: cell, forAchievement: achievement)
+        cell.configure(withViewModel: achievementViewModel)
         return cell
-    }
-
-    private func configure(cell: AchievementCollectionViewCell, forAchievement achievement: Achievement) {
-        cell.levelValuelabel.text = achievement.level
-        cell.progressBar.setProgress(Float(achievement.progress)/50, animated: false)
-        cell.progressvalueLabel.text = achievement.progress.description + "pts"
-        cell.totalProgressIndicatorLabel.text = achievement.total.description + "pts"
-        cell.bgImageView.kf.setImage(with: URL(string: achievement.backgroundImageUrl))
-        cell.contentView.alpha = achievement.accessible ? 1 : 0.5
     }
 }
 
 extension AchievementsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexpath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 192)
+        return CGSize(width: collectionView.frame.width, height: Constants.collectionViewItemHeight)
     }
 }
 
