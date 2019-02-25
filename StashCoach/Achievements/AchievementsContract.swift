@@ -12,6 +12,7 @@ protocol AchievementsViewControllerProtocol: class {
     var presenter: AchievementsPresenterProtocol? { get set }
     func updateTitle(withText text: String)
     func refreshView()
+    func showError(withDescription description: String)
 }
 
 protocol AchievementsPresenterProtocol {

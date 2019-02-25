@@ -14,7 +14,7 @@ enum DataParsingError: Error {
 }
 
 extension DataParsingError: LocalizedError {
-    public var errorDescription: String? {
+    public var localizedDescription: String? {
         switch self {
         case .invalidData:
             return NSLocalizedString("Data parsing error", comment: "Inavalid Data Received")

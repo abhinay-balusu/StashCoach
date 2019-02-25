@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Kingfisher
 
-final class AchievementsViewController: UIViewController, AchievementsViewControllerProtocol {
+final class AchievementsViewController: UIViewController {
     var presenter: AchievementsPresenterProtocol?
 
     private struct Constants {
@@ -73,6 +73,12 @@ final class AchievementsViewController: UIViewController, AchievementsViewContro
             ])
     }
 
+    @objc func infoButtonTapped() {
+        // Tells Presenter to call router to navigate to info view
+    }
+}
+
+extension AchievementsViewController: AchievementsViewControllerProtocol {
     func updateTitle(withText text: String) {
         title = text
     }
@@ -81,8 +87,8 @@ final class AchievementsViewController: UIViewController, AchievementsViewContro
         collectionView.reloadData()
     }
 
-    @objc func infoButtonTapped() {
-        // Tells Presenter to call router to navigate to info view
+    func showError(withDescription description: String) {
+        // Display Error
     }
 }
 
@@ -98,6 +104,16 @@ extension AchievementsViewController: UICollectionViewDataSource {
         else { return AchievementCollectionViewCell() }
         cell.configure(withViewModel: achievementViewModel)
         return cell
+    }
+}
+
+extension AchievementsViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard
+            let achievementViewModel = presenter?.achievementViewModel(forRow: indexPath.row),
+            achievementViewModel.achievementAccessibility()
+        else { return }
+        // Then only enable it for user interactions
     }
 }
 

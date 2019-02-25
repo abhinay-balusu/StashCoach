@@ -27,11 +27,13 @@ final class AchievementsPresenter: AchievementsPresenterProtocol {
     func requestCoachData() {
         interactor?.fetchCoachData(completion: { [weak self] (coach, error) in
             DispatchQueue.main.async {
-                if error == nil {
-                    self?.coach = coach
-                    self?.view?.updateTitle(withText: coach?.overview.title ?? "")
-                    self?.view?.refreshView()
+                guard error == nil else {
+                    self?.view?.showError(withDescription: error?.localizedDescription ?? "")
+                    return
                 }
+                self?.coach = coach
+                self?.view?.updateTitle(withText: coach?.overview.title ?? "")
+                self?.view?.refreshView()
             }
         })
     }
