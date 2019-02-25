@@ -22,7 +22,7 @@ protocol AchievementsPresenterProtocol {
     var coach: CoachModelProtocol? { get }
 
     func requestCoachData()
-    func numberOfRows() -> Int?
+    func numberOfRows() -> Int
     func achievementViewModel(forRow row: Int) -> AchievementViewModelProtocol?
 }
 

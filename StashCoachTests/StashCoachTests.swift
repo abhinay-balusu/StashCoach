@@ -46,6 +46,7 @@ class AchievementsPresenterTests: XCTestCase {
     }
 
     func testDataSource() {
+        XCTAssertNil(presenter.coach)
         presenter = AchievementsPresenter(coach: Coach(success: true, status: 200, overview: Overview(title: "Smart Investing"), achievements: [Achievement(id: 1, level: "1", progress: 10, total: 50, backgroundImageUrl: "url", accessible: true)]))
         XCTAssertNotNil(presenter.coach)
         XCTAssert(presenter.numberOfRows() == 1)
@@ -110,8 +111,8 @@ final class AchievementsPresenterMock: AchievementsPresenterProtocol {
         requestCoachDataCalled = true
     }
 
-    func numberOfRows() -> Int? {
-        return coach?.achievements.count
+    func numberOfRows() -> Int {
+        return coach?.achievements.count ?? 0
     }
 
     func achievementViewModel(forRow row: Int) -> AchievementViewModelProtocol? {

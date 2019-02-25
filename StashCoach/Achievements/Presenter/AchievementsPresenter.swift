@@ -12,10 +12,16 @@ final class AchievementsPresenter: AchievementsPresenterProtocol {
     weak var view: AchievementsViewControllerProtocol?
     var interactor: AchievementsInteractorProtocol?
     var router: AchievementsRouterProtocol?
-    var coach: CoachModelProtocol?
+    var coach: CoachModelProtocol? {
+        didSet {
+            achievementViewModels = getAchievementViewModels(forCoach: coach)
+        }
+    }
+    private var achievementViewModels: [AchievementViewModelProtocol] = []
 
     init(coach: CoachModelProtocol? = nil) {
         self.coach = coach
+        achievementViewModels = getAchievementViewModels(forCoach: self.coach)
     }
 
     func requestCoachData() {
@@ -30,13 +36,21 @@ final class AchievementsPresenter: AchievementsPresenterProtocol {
         })
     }
 
-    func numberOfRows() -> Int? {
-        return coach?.achievements.count
+    func numberOfRows() -> Int {
+        return coach?.achievements.count ?? 0
     }
 
     func achievementViewModel(forRow row: Int) -> AchievementViewModelProtocol? {
-        guard let achievement = coach?.achievements[safe: row] else { return nil }
-        return AchievementViewModel(achievement: achievement)
+        return achievementViewModels[safe: row] ?? nil
+    }
+
+    private func getAchievementViewModels(forCoach coach: CoachModelProtocol?) -> [AchievementViewModelProtocol] {
+        guard let achievements = coach?.achievements else { return [] }
+        achievementViewModels = []
+        for achievement in achievements {
+            achievementViewModels.append(AchievementViewModel(achievement: achievement))
+        }
+        return achievementViewModels
     }
 }
 
