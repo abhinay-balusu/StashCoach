@@ -6,11 +6,19 @@
 //  Copyright © 2019 abhinay. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 final class AchievementsRouter: AchievementsRouterProtocol {
     static func achievementsModule() -> AchievementsViewController {
         return AchievementsAssembler.assembleModule() as? AchievementsViewController ?? AchievementsViewController()
+    }
+
+    func navigateToAchievementDetailsModule(from viewController: UIViewController, forAchievement achievement: AchievementModelProtocol) {
+        // Achievement Detail Module
+    }
+
+   func navigateToInfoModule(from viewController: UIViewController) {
+        // Info Module
     }
 }
 

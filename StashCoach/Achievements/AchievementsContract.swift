@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol AchievementsViewControllerProtocol: class {
     var presenter: AchievementsPresenterProtocol? { get set }
@@ -25,6 +26,9 @@ protocol AchievementsPresenterProtocol {
     func requestCoachData()
     func numberOfRows() -> Int
     func achievementViewModel(forRow row: Int) -> AchievementViewModelProtocol?
+
+    func navigateToAchievementDetailsModule(for row: Int)
+    func navigateToInfoModule()
 }
 
 protocol AchievementsInteractorProtocol {
@@ -36,6 +40,9 @@ protocol AchievementsInteractorProtocol {
 
 protocol AchievementsRouterProtocol {
     static func achievementsModule() -> AchievementsViewController
+
+    func navigateToAchievementDetailsModule(from viewController: UIViewController, forAchievement achievement: AchievementModelProtocol)
+    func navigateToInfoModule(from viewController: UIViewController)
 }
 
 protocol AchievementViewModelProtocol {

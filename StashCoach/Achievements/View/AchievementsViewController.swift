@@ -75,6 +75,7 @@ final class AchievementsViewController: UIViewController {
 
     @objc func infoButtonTapped() {
         // Tells Presenter to call router to navigate to info view
+        presenter?.navigateToInfoModule()
     }
 }
 
@@ -109,11 +110,7 @@ extension AchievementsViewController: UICollectionViewDataSource {
 
 extension AchievementsViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard
-            let achievementViewModel = presenter?.achievementViewModel(forRow: indexPath.row),
-            achievementViewModel.achievementAccessibility()
-        else { return }
-        // Then only enable it for user interactions
+        presenter?.navigateToAchievementDetailsModule(for: indexPath.row)
     }
 }
 

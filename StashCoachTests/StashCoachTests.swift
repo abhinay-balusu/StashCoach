@@ -118,6 +118,18 @@ final class AchievementsPresenterMock: AchievementsPresenterProtocol {
     func achievementViewModel(forRow row: Int) -> AchievementViewModelProtocol? {
         return AchievementViewModel(achievement: Achievement(id: 1, level: "1", progress: 10, total: 50, backgroundImageUrl: "url", accessible: true))
     }
+
+    var navigateToAchievementDetailsModuleCalled: Bool = false
+    var achievementIndex: Int = 0
+    func navigateToAchievementDetailsModule(for row: Int) {
+        navigateToAchievementDetailsModuleCalled = true
+        achievementIndex = row
+    }
+
+    var navigateToInfoModuleCalled: Bool = false
+    func navigateToInfoModule() {
+        navigateToInfoModuleCalled = true
+    }
 }
 
 class AchievementsViewControllerTests: XCTestCase {
@@ -166,5 +178,13 @@ class AchievementsViewControllerTests: XCTestCase {
         XCTAssert(achievementViewModel?.achievementProgressValue() == "10pts")
         XCTAssert(achievementViewModel?.achievementTotalprogress() == "50pts")
         XCTAssertNotNil(achievementViewModel?.achievementBgImageURL())
+    }
+
+    func testNavigations() {
+        view.infoButtonTapped()
+        XCTAssert(presenter.navigateToInfoModuleCalled)
+        view.collectionView(UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout()), didSelectItemAt: IndexPath(row: 2, section: 0))
+        XCTAssert(presenter.navigateToAchievementDetailsModuleCalled)
+        XCTAssert(presenter.achievementIndex == 2)
     }
 }

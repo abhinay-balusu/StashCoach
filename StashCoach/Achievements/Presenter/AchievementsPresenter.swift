@@ -56,6 +56,24 @@ final class AchievementsPresenter: AchievementsPresenterProtocol {
     }
 }
 
+extension AchievementsPresenter {
+    func navigateToAchievementDetailsModule(for row: Int) {
+        guard
+            let view = view as? AchievementsViewController,
+            let achievement = coach?.achievements[safe: row],
+            achievement.accessible
+        else { return }
+        router?.navigateToAchievementDetailsModule(from: view, forAchievement: achievement)
+    }
+
+    func navigateToInfoModule() {
+        guard
+            let view = view as? AchievementsViewController
+        else { return }
+        router?.navigateToInfoModule(from: view)
+    }
+}
+
 struct AchievementViewModel: AchievementViewModelProtocol {
 
     static let ptsSuffix: String = "pts"
